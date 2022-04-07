@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Database } from './core/data/database';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'IntroProject';
+
+  database: Database = new Database()
+
+  constructor(){
+    console.log(this.database)
+  }
 }
