@@ -3,4 +3,7 @@
     <h1 id="title">Project Management</h1>
     <fa-icon id="page-icon" [icon]="helmetIcon"></fa-icon>
   </div>
+  <div id="content">
+    <app-location-card *ngFor="let location of database.locations" [location]="location"></app-location-card>
+  </div>
 </div>

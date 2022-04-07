@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { LocationSummary } from '../../data/models/location-summary';
 
 @Component({
   selector: 'app-location-card',
@@ -11,5 +12,17 @@ export class LocationCardComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  // ------------------------------------ DATA ------------------------------------
+
+  @Input() location: LocationSummary
+
+  // ------------------------------------ STATE ------------------------------------
+
+  // ------------------------------------ EVENTS ------------------------------------
+
+  // ------------------------------------ EVENT HANDLERS ------------------------------------
+
+  // ------------------------------------ FUNCTIONALITY ------------------------------------
 
 }
