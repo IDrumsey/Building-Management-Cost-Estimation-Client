@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { faHelmetSafety } from '@fortawesome/free-solid-svg-icons';
 import { Database } from './core/data/database';
 
 @Component({
@@ -14,4 +15,8 @@ export class AppComponent {
   constructor(){
     console.log(this.database)
   }
+
+  // ----------------------------------- STYLES -----------------------------------
+
+  helmetIcon = faHelmetSafety
 }
