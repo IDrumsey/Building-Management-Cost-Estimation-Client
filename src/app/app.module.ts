@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { LocationCardComponent } from './core/components/location-card/location-card.component';
 import { ProjectCardComponent } from './core/components/project-card/project-card.component';
 import { TaskCardComponent } from './core/components/task-card/task-card.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { TaskCardComponent } from './core/components/task-card/task-card.compone
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
