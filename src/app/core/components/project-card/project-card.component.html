@@ -1,1 +1,8 @@
-<p>project-card works!</p>
+<div class="project-card">
+    <p class="title">{{project.title}}</p>
+    <div *ngIf="showingDetails" class="details">
+        <div class="tasks">
+            <app-task-card *ngFor="let task of project.tasks" [task]="task"></app-task-card>
+        </div>
+    </div>
+</div>

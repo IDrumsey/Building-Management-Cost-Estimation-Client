@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Task } from '../../data/models/task';
 
 @Component({
   selector: 'app-task-card',
@@ -13,6 +14,8 @@ export class TaskCardComponent implements OnInit {
   }
 
   // ------------------------------------ DATA ------------------------------------
+
+  @Input() task: Task
 
   // ------------------------------------ STATE ------------------------------------
 

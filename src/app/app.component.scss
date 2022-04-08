@@ -17,6 +17,16 @@
     color: #FFC700;
 }
 
+#content {
+    margin-top: 25px;
+}
+
+#locations {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
 // mobile
 @media screen and (max-width: 480px) {
     #wrapper {

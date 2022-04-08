@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Project } from '../../data/models/project';
 
 @Component({
   selector: 'app-project-card',
@@ -14,7 +15,11 @@ export class ProjectCardComponent implements OnInit {
 
   // ------------------------------------ DATA ------------------------------------
 
+  @Input() project: Project
+
   // ------------------------------------ STATE ------------------------------------
+
+  showingDetails = true
 
   // ------------------------------------ EVENTS ------------------------------------
 

@@ -1,0 +1,40 @@
+.location-card {
+    border: .25px solid #000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .25);
+    border-radius: 2px;
+    padding: 10px 25px;
+}
+
+.location-address {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.line {
+    height: .25px;
+    background-color: #000;
+    margin: 10px 0;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card {
+    padding: 10px 0;
+}
+
+// mobile
+@media screen and (max-width: 480px) {
+    .projects {
+        margin-left: 0;
+    }
+}
+
+// desktop
+@media screen and (min-width: 480px) {
+    .projects {
+        margin-left: 25px;
+    }
+}
