@@ -19,7 +19,7 @@ export class ProjectCardComponent implements OnInit {
 
   // ------------------------------------ STATE ------------------------------------
 
-  showingDetails = true
+  showingDetails = false
 
   // ------------------------------------ EVENTS ------------------------------------
 

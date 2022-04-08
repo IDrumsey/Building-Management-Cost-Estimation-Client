@@ -19,12 +19,20 @@ export class LocationCardComponent implements OnInit {
 
   // ------------------------------------ STATE ------------------------------------
 
-  showingProjects = true
+  showingProjects = false
 
   // ------------------------------------ EVENTS ------------------------------------
 
   // ------------------------------------ EVENT HANDLERS ------------------------------------
 
+  onHeaderClick(): void {
+    this.toggleShowingDetails()
+  }
+
   // ------------------------------------ FUNCTIONALITY ------------------------------------
+
+  toggleShowingDetails(): void {
+    this.showingProjects = !this.showingProjects
+  }
 
 }

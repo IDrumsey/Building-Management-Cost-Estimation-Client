@@ -1,7 +1,9 @@
 <div class="location-card">
-    <h2 class="location-address">{{location.location}}</h2>
+    <div class="header" (click)="onHeaderClick()">
+        <h2 class="location-address">{{location.location}}</h2>
+    </div>
+    <div *ngIf="showingProjects" class="line"></div>
     <div *ngIf="showingProjects" class="details">
-        <div class="line"></div>
         <div class="projects">
             <app-project-card class="project-card" *ngFor="let project of location.projects" [project]="project"></app-project-card>
         </div>
