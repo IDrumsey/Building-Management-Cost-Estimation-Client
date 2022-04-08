@@ -6,6 +6,10 @@
 #header {
     display: flex;
     align-items: center;
+    position: sticky;
+    top: 0;
+    padding-top: 25px;
+    background-color: rgba(255, 255, 255, 0.95);
 }
 
 #title {
@@ -19,24 +23,33 @@
 
 #content {
     margin-top: 25px;
+    padding-bottom: 25px !important;
 }
 
 #locations {
     display: flex;
     flex-direction: column;
-    row-gap: 10px;
+    row-gap: 25px;
 }
 
 // mobile
 @media screen and (max-width: 480px) {
-    #wrapper {
-        padding: 25px 25px;
+    #header {
+        padding: 25px 50px 0 50px;
+    }
+
+    #content {
+        padding: 0 25px;
     }
 }
 
 // desktop
 @media screen and (min-width: 480px) {
-    #wrapper {
-        padding: 25px 50px;
+    #header {
+        padding: 25px 50px 0 50px;
+    }
+
+    #content {
+        padding: 0 50px;
     }
 }
