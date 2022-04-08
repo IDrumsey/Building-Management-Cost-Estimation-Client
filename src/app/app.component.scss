@@ -8,8 +8,9 @@
     align-items: center;
     position: sticky;
     top: 0;
-    padding-top: 25px;
-    background-color: rgba(255, 255, 255, 0.95);
+    padding: 10px 0;
+    background-color: rgba(22, 22, 22, 0.874);
+    color: #fff;
 }
 
 #title {
@@ -35,7 +36,7 @@
 // mobile
 @media screen and (max-width: 480px) {
     #header {
-        padding: 25px 50px 0 50px;
+        padding: 12px 50px 12px 50px;
     }
 
     #content {
@@ -46,7 +47,7 @@
 // desktop
 @media screen and (min-width: 480px) {
     #header {
-        padding: 25px 50px 0 50px;
+        padding: 12px 50px 12px 50px;
     }
 
     #content {
