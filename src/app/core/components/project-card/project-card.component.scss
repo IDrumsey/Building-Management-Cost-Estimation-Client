@@ -1,4 +1,29 @@
+.header {
+    cursor: pointer;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.header-line {
+    height: .5px;
+    background-color: #000;
+    transition: width 250ms ease-in-out;
+}
+
+.header-line.hiding {
+    width: 0;
+}
+
+.header-line.showing {
+    width: 100%;
+}
+
 .title {
     font-size: 15px;
     font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.tasks {
+    margin-left: 25px;
 }

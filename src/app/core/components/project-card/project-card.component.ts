@@ -25,6 +25,14 @@ export class ProjectCardComponent implements OnInit {
 
   // ------------------------------------ EVENT HANDLERS ------------------------------------
 
+  onHeaderClick(): void {
+    this.toggleDetails()
+  }
+
   // ------------------------------------ FUNCTIONALITY ------------------------------------
+
+  toggleDetails(): void {
+    this.showingDetails = !this.showingDetails
+  }
 
 }
