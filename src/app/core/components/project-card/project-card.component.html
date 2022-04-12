@@ -5,7 +5,7 @@
     </div>
     <div *ngIf="showingDetails" class="details">
         <div class="tasks">
-            <app-task-card *ngFor="let task of project.tasks" [task]="task"></app-task-card>
+            <app-task-card *ngFor="let task of project.tasks" [task]="task" class="task"></app-task-card>
         </div>
     </div>
 </div>

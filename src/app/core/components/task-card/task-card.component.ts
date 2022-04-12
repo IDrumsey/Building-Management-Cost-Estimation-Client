@@ -19,10 +19,19 @@ export class TaskCardComponent implements OnInit {
 
   // ------------------------------------ STATE ------------------------------------
 
+  showingDetails = false
+
   // ------------------------------------ EVENTS ------------------------------------
 
   // ------------------------------------ EVENT HANDLERS ------------------------------------
+  
+  onHeaderClick(): void {
+    this.toggleDetails()
+  }
 
   // ------------------------------------ FUNCTIONALITY ------------------------------------
 
+  toggleDetails(): void {
+    this.showingDetails = !this.showingDetails
+  }
 }

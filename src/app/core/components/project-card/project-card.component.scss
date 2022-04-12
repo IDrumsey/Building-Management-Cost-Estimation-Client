@@ -24,6 +24,17 @@
     margin-bottom: 5px;
 }
 
+.details {
+    margin-bottom: 25px;
+}
+
 .tasks {
     margin-left: 25px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.task {
+    width: 100%;
 }
