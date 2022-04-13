@@ -12,11 +12,14 @@
 .header {
     cursor: pointer;
     padding: 10px 25px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .location-address {
     font-size: 15px;
     font-weight: 600;
+    flex: 1;
 }
 
 .line {
