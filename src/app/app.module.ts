@@ -9,6 +9,7 @@ import { ProjectCardComponent } from './core/components/project-card/project-car
 import { TaskCardComponent } from './core/components/task-card/task-card.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CostCardComponent } from './core/components/cost-card/cost-card.component';
+import { ButtonComponent } from './core/components/button/button.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { CostCardComponent } from './core/components/cost-card/cost-card.compone
     LocationCardComponent,
     ProjectCardComponent,
     TaskCardComponent,
-    CostCardComponent
+    CostCardComponent,
+    ButtonComponent
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,9 @@
 <div class="project-card">
-    <div class="header" (click)="onHeaderClick()">
-        <p class="title">{{project.title}}</p>
+    <div class="header">
+        <div class="header-top">
+            <p class="title" (click)="onHeaderClick()">{{project.title}}</p>
+            <app-button text="Add Task"></app-button>
+        </div>
         <div class="header-line" [ngClass]="showingDetails ? 'showing' : 'hiding'"></div>
     </div>
     <div *ngIf="showingDetails" class="details">

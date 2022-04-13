@@ -28,6 +28,10 @@ export class ProjectCardComponent implements OnInit {
   onHeaderClick(): void {
     this.toggleDetails()
   }
+  
+  onAddTaskBtnClick(): void {
+    
+  }
 
   // ------------------------------------ FUNCTIONALITY ------------------------------------
 
