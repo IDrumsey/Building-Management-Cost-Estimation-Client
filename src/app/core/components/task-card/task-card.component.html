@@ -3,17 +3,8 @@
         <p class="title">{{task.title}}</p>
     </div>
     <div *ngIf="showingDetails" class="costs">
-        <div class="cost">
-            <p class="cost-title">Material</p>
-            <p class="dollar-amount">${{task.costs.material}}</p>
-        </div>
-        <div class="cost">
-            <p class="cost-title">Labor</p>
-            <p class="dollar-amount">${{task.costs.labor}}</p>
-        </div>
-        <div class="cost">
-            <p class="cost-title">All Inclusive</p>
-            <p class="dollar-amount">${{task.costs.allInclusive}}</p>
-        </div>
+        <app-cost-card [title]="'Material'" [cost]="task.costs.material"></app-cost-card>
+        <app-cost-card [title]="'Labor'" [cost]="task.costs.labor"></app-cost-card>
+        <app-cost-card [title]="'All Inclusive'" [cost]="task.costs.allInclusive"></app-cost-card>
     </div>
 </div>
