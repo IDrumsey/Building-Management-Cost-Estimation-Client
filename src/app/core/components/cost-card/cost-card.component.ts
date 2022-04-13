@@ -58,4 +58,23 @@ export class CostCardComponent implements OnInit {
 
   // ---------------------------- FUNCTIONALITY ----------------------------
 
+  numStrDecimals(numStr: string, numDecimals: number): string {
+    if(numStr.includes('.')){
+      // split by .
+      let [str1, str2] = numStr.split('.')
+      str2 = str2.slice(0, numDecimals)
+      if(str1){
+        return str1 + '.' + str2
+      }
+      throw "Error"
+    }
+    else{
+      numStr += '.'
+      for(let i = 0; i < numDecimals; i++){
+        numStr += '0'
+      }
+      return numStr
+    }
+  }
+
 }
