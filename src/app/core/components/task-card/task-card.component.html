@@ -3,8 +3,8 @@
         <p class="title">{{task.title}}</p>
     </div>
     <div *ngIf="showingDetails" class="costs">
-        <app-cost-card [title]="'Material'" [cost]="task.costs.material"></app-cost-card>
-        <app-cost-card [title]="'Labor'" [cost]="task.costs.labor"></app-cost-card>
-        <app-cost-card [title]="'All Inclusive'" [cost]="task.costs.allInclusive"></app-cost-card>
+        <app-cost-card [title]="'Material'" [cost]="task.costs.material" (costChange)="onMaterialCostChange($event)"></app-cost-card>
+        <app-cost-card [title]="'Labor'" [cost]="task.costs.labor" (costChange)="onLaborCostChange($event)"></app-cost-card>
+        <app-cost-card [title]="'All Inclusive'" [cost]="task.costs.allInclusive" (costChange)="onAllInclusiveCostChange($event)"></app-cost-card>
     </div>
 </div>

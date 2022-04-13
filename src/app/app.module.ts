@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms';
+
 import { AppComponent } from './app.component';
 import { LocationCardComponent } from './core/components/location-card/location-card.component';
 import { ProjectCardComponent } from './core/components/project-card/project-card.component';
@@ -20,7 +21,8 @@ import { CostCardComponent } from './core/components/cost-card/cost-card.compone
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

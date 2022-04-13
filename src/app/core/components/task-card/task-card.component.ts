@@ -29,6 +29,18 @@ export class TaskCardComponent implements OnInit {
     this.toggleDetails()
   }
 
+  onMaterialCostChange(newCost: number): void {
+    this.task.costs.material = newCost
+  }
+
+  onLaborCostChange(newCost: number): void {
+    this.task.costs.labor = newCost
+  }
+
+  onAllInclusiveCostChange(newCost: number): void {
+    this.task.costs.allInclusive = newCost
+  }
+
   // ------------------------------------ FUNCTIONALITY ------------------------------------
 
   toggleDetails(): void {

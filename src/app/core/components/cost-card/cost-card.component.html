@@ -1,4 +1,9 @@
 <div class="cost">
     <p class="title">{{title}}</p>
-    <p class="dollar-amount">${{cost}}</p>
+    <span class="dollar-amount-wrapper">
+        <p *ngIf="!editing" class="dollar-amount" (click)="onCostFixedClick()">${{cost}}</p>
+        <p *ngIf="editing" style="display: inline">$</p>
+        <input #costField *ngIf="editing" type="number" [(ngModel)]="updatedTempCost" class="dollar-amount dollar-amount-editable">
+        <fa-icon *ngIf="editing" [icon]="checkIcon" class="update-button" (click)="onUpdateBtnClick()"></fa-icon>
+    </span>
 </div>

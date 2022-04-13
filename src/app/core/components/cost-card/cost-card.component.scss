@@ -8,6 +8,36 @@
     font-style: italic;
 }
 
+.dollar-amount-wrapper {
+    margin-left: auto;
+}
+
 .dollar-amount {
     letter-spacing: 1px;
+}
+
+.dollar-amount-editable {
+    border: none;
+    text-align: right;
+    width: 100px;
+}
+
+.dollar-amount-editable:focus {
+    outline: none;
+}
+
+// https://stackoverflow.com/a/33750044/17712310
+.dollar-amount-editable::-webkit-inner-spin-button,
+.dollar-amount-editable::-webkit-outer-spin-button {
+    appearance: none;
+}
+
+.update-button {
+    color: rgb(0, 126, 80);
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.update-button:hover {
+    color: rgb(0, 85, 54);
 }
