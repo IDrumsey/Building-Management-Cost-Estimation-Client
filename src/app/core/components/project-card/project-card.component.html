@@ -2,7 +2,7 @@
     <div class="header">
         <div class="header-top">
             <p class="title" (click)="onHeaderClick()">{{project.title}}</p>
-            <app-button text="Add Task"></app-button>
+            <app-button *ngIf="showingDetails" text="Add Task"></app-button>
         </div>
         <div class="header-line" [ngClass]="showingDetails ? 'showing' : 'hiding'"></div>
     </div>

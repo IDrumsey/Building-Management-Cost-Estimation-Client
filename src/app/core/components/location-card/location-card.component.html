@@ -1,7 +1,7 @@
 <div class="location-card">
     <div class="header">
         <h2 class="location-address" (click)="onHeaderClick()">{{location.location}}</h2>
-        <app-button text="Add Project"></app-button>
+        <app-button *ngIf="showingProjects" text="Add Project"></app-button>
     </div>
     <div *ngIf="showingProjects" class="line"></div>
     <div *ngIf="showingProjects" class="details">
