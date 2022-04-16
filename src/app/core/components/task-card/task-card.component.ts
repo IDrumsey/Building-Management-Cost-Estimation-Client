@@ -94,7 +94,6 @@ export class TaskCardComponent implements OnInit {
   }
 
   onConfirmNew(): void {
-    // BUG : costs aren't right
     this.confirmNew.emit(this.newTask)
   }
 

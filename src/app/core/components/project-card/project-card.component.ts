@@ -40,7 +40,6 @@ export class ProjectCardComponent implements OnInit {
   }
 
   onConfirmNewTask(newTask: Task): void {
-    console.log(newTask)
     this.project.tasks.push(newTask)
     this.addingTask = false
   }
