@@ -6,11 +6,45 @@
 .task-card {
     font-size: 14px;
     font-weight: 400;
+    margin-bottom: 25px;
+}
+
+.title-editable {
+    border: none;
+}
+
+.title-editable:focus {
+    outline: none;
 }
 
 .costs {
     display: flex;
     flex-direction: column;
     row-gap: 5px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
+}
+
+.options {
+    display: flex;
+    flex-direction: row-reverse;
+    column-gap: 20px;
+}
+
+.options > fa-icon {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.confirm-new-task-button {
+    color: #32B988;
+}
+
+.cancel-new-task-button,
+.validation-error {
+    color: #b93275;
+}
+
+.validation-error {
+    margin-top: 2px;
+    font-size: 12px;
 }

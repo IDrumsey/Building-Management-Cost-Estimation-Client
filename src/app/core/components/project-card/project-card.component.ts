@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Project } from '../../data/models/project';
+import { Task } from '../../data/models/task';
 
 @Component({
   selector: 'app-project-card',
@@ -20,6 +21,7 @@ export class ProjectCardComponent implements OnInit {
   // ------------------------------------ STATE ------------------------------------
 
   showingDetails = false
+  addingTask = false
 
   // ------------------------------------ EVENTS ------------------------------------
 
@@ -30,7 +32,17 @@ export class ProjectCardComponent implements OnInit {
   }
   
   onAddTaskBtnClick(): void {
-    
+    this.addingTask = true
+  }
+
+  onCancelNewTask(): void {
+    this.addingTask = false
+  }
+
+  onConfirmNewTask(newTask: Task): void {
+    console.log(newTask)
+    this.project.tasks.push(newTask)
+    this.addingTask = false
   }
 
   // ------------------------------------ FUNCTIONALITY ------------------------------------

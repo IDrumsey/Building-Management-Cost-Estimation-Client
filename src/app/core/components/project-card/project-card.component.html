@@ -2,12 +2,13 @@
     <div class="header">
         <div class="header-top">
             <p class="title" (click)="onHeaderClick()">{{project.title}}</p>
-            <app-button *ngIf="showingDetails" text="Add Task"></app-button>
+            <app-button *ngIf="showingDetails && !addingTask" text="Add Task" (click)="onAddTaskBtnClick()"></app-button>
         </div>
         <div class="header-line" [ngClass]="showingDetails ? 'showing' : 'hiding'"></div>
     </div>
     <div *ngIf="showingDetails" class="details">
         <div class="tasks">
+            <app-task-card *ngIf="addingTask" [new]="true" class="task" (cancelNew)="onCancelNewTask()" (confirmNew)="onConfirmNewTask($event)"></app-task-card>
             <app-task-card *ngFor="let task of project.tasks" [task]="task" class="task"></app-task-card>
         </div>
     </div>

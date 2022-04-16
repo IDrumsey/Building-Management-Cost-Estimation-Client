@@ -1,10 +1,23 @@
 <div class="task-card">
     <div class="header" (click)="onHeaderClick()">
-        <p class="title">{{task.title}}</p>
+        <p *ngIf="!new" class="title">{{task.title}}</p>
+        <input *ngIf="new" class="title title-editable" placeholder="Task title" type="text" [formControl]="newTaskTitleProxy">
+        <div *ngIf="newTaskTitleProxy.invalid && newTaskTitleProxy.dirty">
+            <p *ngIf="newTaskTitleProxy.errors?.['required']" class="validation-error">Required</p>
+        </div>
     </div>
+    <!-- https://angular.io/guide/form-validation#built-in-validator-functions -->
     <div *ngIf="showingDetails" class="costs">
-        <app-cost-card [title]="'Material'" [cost]="task.costs.material" (costChange)="onMaterialCostChange($event)"></app-cost-card>
-        <app-cost-card [title]="'Labor'" [cost]="task.costs.labor" (costChange)="onLaborCostChange($event)"></app-cost-card>
-        <app-cost-card [title]="'All Inclusive'" [cost]="task.costs.allInclusive" (costChange)="onAllInclusiveCostChange($event)"></app-cost-card>
+        <app-cost-card *ngIf="!new" [title]="'Material'" [cost]="task.costs.material" (costChange)="onMaterialCostChange($event)"></app-cost-card>
+        <app-cost-card *ngIf="!new" [title]="'Labor'" [cost]="task.costs.labor" (costChange)="onLaborCostChange($event)"></app-cost-card>
+        <app-cost-card *ngIf="!new" [title]="'All Inclusive'" [cost]="task.costs.allInclusive" (costChange)="onAllInclusiveCostChange($event)"></app-cost-card>
+        <!-- new costs -->
+        <app-cost-card *ngIf="new" [title]="'Material'" [cost]="newTask.costs.material" (costChange)="onMaterialCostChange($event)"></app-cost-card>
+        <app-cost-card *ngIf="new" [title]="'Labor'" [cost]="newTask.costs.labor" (costChange)="onLaborCostChange($event)"></app-cost-card>
+        <app-cost-card *ngIf="new" [title]="'All Inclusive'" [cost]="newTask.costs.allInclusive" (costChange)="onAllInclusiveCostChange($event)"></app-cost-card>
+    </div>
+    <div *ngIf="new" class="options">
+        <fa-icon [icon]="checkIcon" class="confirm-new-task-button" (click)="onConfirmNew()"></fa-icon>
+        <fa-icon [icon]="cancelIcon" class="cancel-new-task-button" (click)="onCancelNew()"></fa-icon>
     </div>
 </div>
