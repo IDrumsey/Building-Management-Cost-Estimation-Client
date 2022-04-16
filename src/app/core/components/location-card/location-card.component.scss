@@ -37,6 +37,49 @@
     flex-direction: column;
 }
 
+.new-project {
+    display: flex;
+    align-items: center;
+    column-gap: 25px;
+}
+
+.new-project-title {
+    margin: 10px 0;
+    border: none;
+    flex: 1;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.new-project-title:focus {
+    outline: none;
+}
+
+.options {
+    display: flex;
+    column-gap: 25px;
+    margin-left: auto;
+}
+
+.options > fa-icon {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.confirm-new-project-button {
+    color: #32B988;
+}
+
+.cancel-new-project-button,
+.validation-error {
+    color: #b93275;
+}
+
+.validation-error {
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
 // mobile
 @media screen and (max-width: 480px) {
     .projects {

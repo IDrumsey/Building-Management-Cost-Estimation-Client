@@ -1,11 +1,20 @@
 <div class="location-card">
     <div class="header">
         <h2 class="location-address" (click)="onHeaderClick()">{{location.location}}</h2>
-        <app-button *ngIf="showingProjects" text="Add Project"></app-button>
+        <app-button *ngIf="showingProjects" text="Add Project" (click)="onAddProjectBtnClick()"></app-button>
     </div>
     <div *ngIf="showingProjects" class="line"></div>
     <div *ngIf="showingProjects" class="details">
         <div class="projects">
+            <div *ngIf="addingNewProject" class="new-project">
+                <input #newProjectTitleEl type="text" [formControl]="newProjectTitle" placeholder="New project title" class="new-project-title">
+                <div class="options">
+                    <fa-icon [icon]="cancelIcon" class="cancel-new-project-button" (click)="onNewProjectCancel()"></fa-icon>
+                    <fa-icon [icon]="checkIcon" class="confirm-new-project-button" (click)="onNewProjectConfirm()"></fa-icon>
+                </div>
+            </div>
+            <!-- https://angular.io/guide/form-validation#built-in-validator-functions -->
+            <p *ngIf="addingNewProject && newProjectTitle.invalid && newProjectTitle.dirty && newProjectTitle.errors?.['required']" class="validation-error">Required</p>
             <app-project-card class="project-card" *ngFor="let project of location.projects" [project]="project"></app-project-card>
         </div>
     </div>
