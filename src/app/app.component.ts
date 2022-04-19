@@ -13,7 +13,6 @@ export class AppComponent {
   database: Database = new Database()
 
   constructor(){
-    console.log(this.database)
   }
 
   // ----------------------------------- STYLES -----------------------------------
